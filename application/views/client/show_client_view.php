@@ -77,6 +77,21 @@
   </div>
 </div>
 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Emergency Contact Name</label>  
+  <div class="col-md-4">
+  <?php echo form_input('emergency_name',$query['emergency_name'], array('placeholder' => 'Emergency Contact Name', 'class' => 'form-control input-md')); ?>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Emergency Contact Phone</label>  
+  <div class="col-md-4">
+  <?php echo form_input('emergency_phone_number',$query['emergency_phone_number'], array('placeholder' => 'Emergency Contact Phone', 'class' => 'form-control input-md')); ?>
+  </div>
+</div>
+
 <!-- Button -->
 <div class="form-group">
   <div class="col-md-4 col-md-push-4">
@@ -85,6 +100,7 @@
 </div>
 
 </fieldset>
+
 <?php echo form_close(); ?>
 <hr>
 <h2 class="text-center">Other options</h2>

@@ -78,6 +78,22 @@
   </div>
 </div>
 
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Emergency Contact Name</label>  
+  <div class="col-md-4">
+  <?php echo form_input('emergency_name','', array('placeholder' => 'Emergency Contact Name', 'class' => 'form-control input-md')); ?>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Emergency Contact Phone</label>  
+  <div class="col-md-4">
+  <?php echo form_input('emergency_phone_number','', array('placeholder' => 'Emergency Contact Phone', 'class' => 'form-control input-md')); ?>
+  </div>
+</div>
+
 <!-- Button -->
 <div class="form-group">
   <div class="col-md-4 col-md-push-4">

@@ -5,7 +5,7 @@ class Client extends CI_Controller {
 
 	public function index()
 	{
-		$this->create();
+		redirect('/Client/create');
 	}
 
 	public function create()
@@ -30,7 +30,7 @@ class Client extends CI_Controller {
 		redirect('/Client/show/'.$client_id);
 	}
 
-	public function list_clients()
+	public function list()
 	{
 		// Get list of clients
         $data['clients'] = $this->client_model->list();
