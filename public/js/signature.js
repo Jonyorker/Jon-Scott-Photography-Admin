@@ -1,4 +1,5 @@
-var wrapper = document.getElementById("signature-pad");
+[1,2,3].map(function (id) {
+var wrapper = document.getElementById("signature-pad_" + id);
 var clearButton = wrapper.querySelector("[data-action=clear]");
 var savePNGButton = wrapper.querySelector("[data-action=save-png]");
 var canvas = wrapper.querySelector("canvas");
@@ -19,7 +20,7 @@ function resizeCanvas() {
 
   // This part causes the canvas to be cleared
   canvas.width = canvas.offsetWidth * ratio;
-  canvas.height = canvas.offsetHeight * ratio;
+  canvas.height = 300 * ratio;
   canvas.getContext("2d").scale(ratio, ratio);
 
   // This library does not listen for canvas changes, so after the canvas is automatically
@@ -115,3 +116,4 @@ savePNGButton.addEventListener("click", function (event) {
 //     download(dataURL, "signature.svg");
 //   }
 // });
+});

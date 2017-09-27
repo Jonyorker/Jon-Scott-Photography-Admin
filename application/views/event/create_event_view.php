@@ -21,83 +21,79 @@
 <!-- Form Name -->
 <h2 class="text-center">Add Event</h2>
 <hr>
-
+<div class="row">
+<div class="col-md-6">
 <h3 class="text-center">Venue Information</h3>
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Name of Venue</label>  
-  <div class="col-md-4">
+  <label class="col-md-2 control-label" for="textinput">Name of Venue</label>  
+  <div class="col-md-10">
   <?php echo form_input('venue_name','', array('placeholder' => 'Venue Name', 'class' => 'form-control input-md')); ?>
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Website</label>  
-  <div class="col-md-4">
+  <label class="col-md-2 control-label" for="textinput">Website</label>  
+  <div class="col-md-10">
   <?php echo form_input('venue_website','', array('placeholder' => 'Website', 'class' => 'form-control input-md')); ?>
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Address</label>  
-  <div class="col-md-4">
+  <label class="col-md-2 control-label" for="textinput">Address</label>  
+  <div class="col-md-10">
   <?php echo form_input('venue_address','', array('placeholder' => 'Address', 'class' => 'form-control input-md')); ?>
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Phone Number</label>  
-  <div class="col-md-4">
+  <label class="col-md-2 control-label" for="textinput">Phone Number</label>  
+  <div class="col-md-10">
   <?php echo form_input('venue_phone','', array('placeholder' => 'Phone Number', 'class' => 'form-control input-md')); ?>
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Contact Name</label>  
-  <div class="col-md-4">
+  <label class="col-md-2 control-label" for="textinput">Contact Name</label>  
+  <div class="col-md-10">
   <?php echo form_input('venue_contact_name','', array('placeholder' => 'Contact Name', 'class' => 'form-control input-md')); ?>
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Date</label>  
-  <div class='date col-md-4'>
+  <label class="col-md-2 control-label" for="textinput">Date</label>  
+  <div class='date col-md-10'>
       <?php echo form_input('date','', array('placeholder' => 'Click to enter start time', 'class' => 'form-control input-md datepicker')); ?>
   </div>
 </div>
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Prep Time</label>  
-  <div class='date col-md-4'>
+  <label class="col-md-2 control-label" for="textinput">Prep Time</label>  
+  <div class='date col-md-10'>
       <?php echo form_input('prep_time','', array('placeholder' => 'Click to enter start time', 'class' => 'form-control input-md timepicker')); ?>
   </div>
 </div>
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Start Time</label>  
-  <div class='date col-md-4'>
+  <label class="col-md-2 control-label" for="textinput">Start Time</label>  
+  <div class='date col-md-10'>
       <?php echo form_input('start_time','', array('placeholder' => 'Click to enter start time', 'class' => 'form-control input-md timepicker')); ?>
   </div>
 </div>
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">End Time</label>  
-  <div class='date col-md-4'>
+  <label class="col-md-2 control-label" for="textinput">End Time</label>  
+  <div class='date col-md-10'>
       <?php echo form_input('end_time','', array('placeholder' => 'Click to enter end time', 'class' => 'form-control input-md timepicker')); ?>
   </div>
 </div>
+</div>
 
-<hr>
-
-<h3 class="text-center">Client Information</h3>
-<p> INSERT CLIENTS HERE </p>
-
-<hr>
-
+<div class="col-md-6">
 <h3 class="text-center">Notes</h3>
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Delivery Medium</label>  
-  <div class="col-md-4">
+  <label class="col-md-2 control-label" for="textinput">Delivery Medium</label>  
+  <div class="col-md-10">
   <?php 
     $options = array(
       'CLOUD' => 'CLOUD',
@@ -107,20 +103,410 @@
     ?>
   </div>
 </div>
-
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Notes</label>  
-  <div class="col-md-4">
+  <label class="col-md-2 control-label" for="textinput">Notes</label>  
+  <div class="col-md-10">
   <?php echo form_textarea('notes','', array('placeholder' => 'Notes', 'class' => 'form-control input-md')); ?>
   </div>
 </div>
+</div>
+
+<div class="col-md-6 pull-right">
+<h3 class="text-center">Pricing</h3>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Total Hours Creative</label>  
+  <div class='date col-md-4'>
+      <?php echo form_input('hours_creative',0, array('placeholder' => 'Enter Hours', 'class' => 'form-control input-md', 'id' => 'hours_creative')); ?>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Total Hours Develop</label>  
+  <div class='date col-md-4'>
+      <?php echo form_input('hours_develop',0, array('placeholder' => 'Enter Hours', 'class' => 'form-control input-md', 'id' => 'hours_develop')); ?>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Total Price before taxes</label>  
+  <div class='date col-md-4'>
+      <?php echo form_input('price',0, array('placeholder' => 'Price will show after hours are added', 'class' => 'form-control input-md', 'id' => 'price', 'disabled' => 'disabled')); ?>
+  </div>
+</div>
+</div>
+
+</div>
+
+
 
 <hr>
-<div class="container well">
+
+<h3 class="text-center">Client Information</h3>
+<p> INSERT CLIENTS HERE </p>
+
+<hr>
+<h3 class="text-center">Shotlist</h3>
+
+<div class="row">
+  <h4 class="text-center">Before the Ceremony</h4>
+  <div class="col-md-6">
+    <h5 class="text-center">Bride</h5>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Hair Styling</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('bride_before_hair', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Make up application</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('bride_before_makeup', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">The dress (on a hanger, draped over a chair, etc)</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('bride_before_dress', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Bridal Accesories (Shoes, veil, Garter, Rings, Etc)</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('bride_before_accesories', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Family/Friends assisting bride</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('bride_before_fam_assist', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Putting on jewelry</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('bride_before_jewelry', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Looking into mirror</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('bride_before_mirror', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Pinning boutonniere on father</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('bride_before_boutonniere', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Pinning corsage on mother</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('bride_before_corsage', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Children with Bride</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('bride_before_children', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Hugging family and friends</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('bride_before_hugging', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Other</label>
+      <div class='date col-md-6'>
+        <?php echo form_textarea('bride_before_notes','', array('placeholder' => 'Notes', 'class' => 'form-control input-md')); ?>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h5 class="text-center">Groom</h5>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Hair Styling</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('groom_before_hair', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Shaving / Beard Trimming</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('groom_before_shave', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">The suit (on a hanger, draped over a chair, etc)</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('groom_before_dress', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Groom Accesories (Tie, Flask, Suspenders, Etc)</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('groom_before_accesories', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Family/Friends assisting groom</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('groom_before_fam_assist', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Putting on jewelry</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('groom_before_jewelry', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Looking into mirror</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('groom_before_mirror', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Pinning boutonniere on father</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('groom_before_boutonniere', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Pinning corsage on mother</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('groom_before_corsage', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Children with groom</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('groom_before_children', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Hugging family and friends</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('groom_before_hugging', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Other</label>
+      <div class='date col-md-6'>
+        <?php echo form_textarea('groom_before_notes','', array('placeholder' => 'Notes', 'class' => 'form-control input-md')); ?>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <h4 class="text-center">At the Ceremony</h4>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Outside the wedding venue</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_venue', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Special places at the wedding venue</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_special_places', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Guest arriving</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_guests_arriving', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Groom greeting guest</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_groom_greet', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Honored family members being seated</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_honored', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Parents arriving</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_parents_arrive', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Parents being seated</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_parents_seated', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Bridesmaids entering</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_bridesmaids', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Maid of honor entering</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_maid_of_honor', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Flower girl entering</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_flower_girl', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Groom and his men entering</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_groom_entering', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Crowd shot of guests</label>
+      <div class='date col-md-6'>
+        <?php echo form_checkbox('ceremony_crowd', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Officiant</label>
+      <div class='date col-md-6'>
+        <?php echo form_checkbox('ceremony_officiant', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Altar</label>
+      <div class='date col-md-6'>
+        <?php echo form_checkbox('ceremony_altar', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Bride making her entrance</label>
+      <div class='date col-md-6'>
+        <?php echo form_checkbox('ceremony_bride_entrance', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">The look</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_look', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Long shot from back of bride to parent</label>
+      <div class='date col-md-6'>
+        <?php echo form_checkbox('ceremony_long_shot', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Parent giving away bride</label>
+      <div class='date col-md-6'>
+        <?php echo form_checkbox('ceremony_parent_giving', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Unity ceremonies or memorials</label>
+      <div class='date col-md-6'>
+        <?php echo form_checkbox('ceremony_unity', TRUE, FALSE); ?>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Religious or cultural ceremony</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_religious', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Ring bearer</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_ring_bearer', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Exchanging vows</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_vows', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Exchanging vows close-up</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_vows_closeup', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">The kiss</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_kiss', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Crowd Applause</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_applause', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Bride and groom walking up the aisle</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_down_aisle', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Bride and groom on steps outside</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_steps', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Throwing of confetti or birdseed</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_confetti', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Bride and groom being congratulated</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_congrats', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Bride and groom leaving the ceremony</label>
+      <div class='date col-md-2'>
+        <?php echo form_checkbox('ceremony_leaving', TRUE, FALSE); ?>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="textinput">Notes</label>
+      <div class='date col-md-6'>
+        <?php echo form_textarea('ceremony_notes','', array('placeholder' => 'Notes', 'class' => 'form-control input-md')); ?>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<h3 class="text-center">Legal</h3>
+<div class="well">
 
       <div>
-        <h3 class="text-center">Legal</h3>
+        
         <ol>
         <li>A deposit of 10% of the total price before taxes is required as a retainer fee.
         </li>
@@ -144,45 +530,64 @@
 
     </div>
 <hr>
-<h3 class="text-center">Pricing</h3>
 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Total Hours Creative</label>  
-  <div class='date col-md-4'>
-      <?php echo form_input('hours_creative',0, array('placeholder' => 'Enter Hours', 'class' => 'form-control input-md', 'id' => 'hours_creative')); ?>
-  </div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Total Hours Develop</label>  
-  <div class='date col-md-4'>
-      <?php echo form_input('hours_develop',0, array('placeholder' => 'Enter Hours', 'class' => 'form-control input-md', 'id' => 'hours_develop')); ?>
-  </div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Total Price before taxes</label>  
-  <div class='date col-md-4'>
-      <?php echo form_input('price',0, array('placeholder' => 'Price will show after hours are added', 'class' => 'form-control input-md', 'id' => 'price', 'disabled' => 'disabled')); ?>
-  </div>
-</div>
-
-<hr>
 <h3 class="text-center">Signatures</h3>
+<div class="row">
+<h4 class="text-center">Groom Signature</h4>
+<hr>
 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Total Price before taxes</label>  
-<div id="signature-pad" class="signature-pad col-md-4">
+<div id="signature-pad_1" class="signature-pad col-md-8 col-md-push-2">
     <div class="signature-pad--body">
       <canvas class="col-md-12"></canvas>
     </div>
     <div class="signature-pad--footer">
-      <div class="description">Sign above</div>
+      <div class="description text-center">Sign above</div>
 
-      <div class="signature-pad--actions">
+      <div class="signature-pad--actions text-center">
         <div>
-          <button type="button" class="button clear" data-action="clear">Clear</button>
-          <button type="button" class="button save" data-action="save-png">Save Signature</button>
+          <button type="button" class="btn btn-primary" data-action="clear">Clear</button>
+          <button type="button" class="btn btn-success" data-action="save-png">Save Signature</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+<h4 class="text-center">Bride Signature</h4>
+<hr>
+<div id="signature-pad_2" class="signature-pad col-md-8 col-md-push-2">
+    <div class="signature-pad--body">
+      <canvas class="col-md-12"></canvas>
+    </div>
+    <div class="signature-pad--footer">
+      <div class="description text-center">Sign above</div>
+
+      <div class="signature-pad--actions text-center">
+        <div>
+          <button type="button" class="btn btn-primary" data-action="clear">Clear</button>
+          <button type="button" class="btn btn-success" data-action="save-png">Save Signature</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+<h4 class="text-center">Jon Scott Photography Rep. Signature</h4>
+<hr>
+<div id="signature-pad_3" class="signature-pad col-md-8 col-md-push-2">
+    <div class="signature-pad--body">
+      <canvas class="col-md-12"></canvas>
+    </div>
+    <div class="signature-pad--footer">
+      <div class="description text-center">Sign above</div>
+
+      <div class="signature-pad--actions text-center">
+        <div>
+          <button type="button" class="btn btn-primary" data-action="clear">Clear</button>
+          <button type="button" class="btn btn-success" data-action="save-png">Save Signature</button>
 
         </div>
       </div>
