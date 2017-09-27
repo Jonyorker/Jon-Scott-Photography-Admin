@@ -11,7 +11,6 @@
 	      </div>
 	      <div class="col-md-6 well text-center">
 	      <h2 class="">Event Management</h2>
-	      	<?php echo anchor('Event/create', 'Add Event', array('class' => 'btn btn-primary btn-block')); ?>
 	      	<?php echo anchor('Event/list', 'List Event', array('class' => 'btn btn-success btn-block')); ?>
 	      </div>
       </div>

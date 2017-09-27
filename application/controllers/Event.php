@@ -8,8 +8,9 @@ class Event extends CI_Controller {
 		redirect('/Event/create');
 	}
 
-	public function create()
+	public function create($client_id)
 	{
+		$data['client'] = $this->client_model->retrieve($client_id);
 		// Load view
 		$data['main_content'] = 'event/create_event_view';
         $this->load->view('template/body_view', $data);
@@ -36,21 +37,22 @@ class Event extends CI_Controller {
         $data['events'] = $this->event_model->list();
 
         // Load views
-		$data['main_content'] = 'event/show_client_list_view';
+		$data['main_content'] = 'event/show_event_list_view';
         $this->load->view('template/body_view', $data);
 	}
 
-	public function show($event_id)
+	public function show($event_id, $client_id)
 	{
 		// Get event info
-		$data['query'] = $this->event_model->retrieve($event_id);
+		$data['event'] = $this->event_model->retrieve($event_id);
+		$data['client'] = $this->client_model->retrieve($client_id);
 
 		// Load views
-		$data['main_content'] = 'event/show_client_view';
+		$data['main_content'] = 'event/show_event_view';
         $this->load->view('template/body_view', $data);
 	}
 
-	public function update($event_id)
+	public function update($event_id, $client_id)
 	{
 		// Get form values
 		foreach($_POST as $key => $val)  
@@ -62,7 +64,7 @@ class Event extends CI_Controller {
 		$this->event_model->update($event_id, $data);
 
 		// Redirect
-		redirect('/Event/show/'.$event_id);
+		redirect('/Event/show/'.$event_id.'/'.$client_id);
 	}
 
 	public function destroy($event_id)

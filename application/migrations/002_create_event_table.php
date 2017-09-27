@@ -13,6 +13,10 @@ class Migration_Create_Event_Table extends CI_Migration {
                                 'unsigned' => TRUE,
                                 'auto_increment' => TRUE
                         ),
+                        'client_id' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ));
                         'venue_name' => array(
                                 'type' => 'TEXT',
                                 'null' => TRUE,
@@ -266,6 +270,10 @@ class Migration_Create_Event_Table extends CI_Migration {
                                 'type' => 'BOOLEAN',
                                 'null' => TRUE,
                         ),
+                        'ceremony_licence' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
                         'ceremony_down_aisle' => array(
                                 'type' => 'BOOLEAN',
                                 'null' => TRUE,
@@ -290,50 +298,229 @@ class Migration_Create_Event_Table extends CI_Migration {
                                 'type' => 'BOOLEAN',
                                 'null' => TRUE,
                         ),
-                        'groom_before_hugging' => array(
+                        'portraits_bride' => array(
                                 'type' => 'BOOLEAN',
                                 'null' => TRUE,
                         ),
-                        'groom_before_hugging' => array(
+                        'portraits_honor' => array(
                                 'type' => 'BOOLEAN',
                                 'null' => TRUE,
                         ),
-                        'groom_before_hugging' => array(
+                        'portraits_bridesmaids' => array(
                                 'type' => 'BOOLEAN',
                                 'null' => TRUE,
                         ),
-                        'groom_before_hugging' => array(
+                        'portraits_bride_parents' => array(
                                 'type' => 'BOOLEAN',
                                 'null' => TRUE,
                         ),
-                        'groom_before_hugging' => array(
+                        'portraits_bride_groom' => array(
                                 'type' => 'BOOLEAN',
                                 'null' => TRUE,
                         ),
-                        'groom_before_hugging' => array(
+                        'portraits_bride_groom_parents' => array(
                                 'type' => 'BOOLEAN',
                                 'null' => TRUE,
                         ),
-                        'groom_before_hugging' => array(
+                        'portraits_bride_groom_party' => array(
                                 'type' => 'BOOLEAN',
                                 'null' => TRUE,
                         ),
-                        'groom_before_hugging' => array(
+                        'portraits_bride_groom_family' => array(
                                 'type' => 'BOOLEAN',
                                 'null' => TRUE,
                         ),
-                        'groom_before_hugging' => array(
+                        'portraits_bride_groom_flower_ring' => array(
                                 'type' => 'BOOLEAN',
                                 'null' => TRUE,
                         ),
-                        'groom_before_hugging' => array(
+                        'portraits_groom_parents' => array(
                                 'type' => 'BOOLEAN',
                                 'null' => TRUE,
                         ),
-                        'groom_before_hugging' => array(
+                        'portraits_groom_best' => array(
                                 'type' => 'BOOLEAN',
                                 'null' => TRUE,
                         ),
+                        'portraits_groom_men' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'portraits_notes' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ),
+                        'reception_site' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_table' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_centerpieces' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_head' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_music' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_place_card' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_gift' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_arrival' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_greet' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_bride_groom_place' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_cake' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_decor' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_mingle' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_dinner_service' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_first_dance' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_dancing' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_dancing_parents' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_cut_cake' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_feeding' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_toast' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_bride_groom_toast' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        
+                        'reception_bouquet' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_garter' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_garter_toss' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_getaway' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_leaving' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_threshold' => array(
+                                'type' => 'BOOLEAN',
+                                'null' => TRUE,
+                        ),
+                        'reception_notes' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ),
+                        'second_first_name' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ),
+                        'second_last_name' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ),
+                        'second_email' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ));
+                        'second_phone_1' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ),
+                        'second_phone_2' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ),
+                        'second_street_address' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ),
+                        'second_city' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ),
+                        'second_province' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ),
+                        'second_postal' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ),
+                        'second_emergency_name' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ),
+                        'second_emergency_phone_number' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ),
+                        'signature_groom' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ),
+                        'signature_bride' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ),
+                        'signature_rep' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ),
+
+
 
                         
                 ));

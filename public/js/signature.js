@@ -1,5 +1,5 @@
 [1,2,3].map(function (id) {
-var wrapper = document.getElementById("signature-pad_" + id);
+var wrapper = document.getElementById("signature_" + id);
 var clearButton = wrapper.querySelector("[data-action=clear]");
 var savePNGButton = wrapper.querySelector("[data-action=save-png]");
 var canvas = wrapper.querySelector("canvas");
@@ -95,7 +95,8 @@ savePNGButton.addEventListener("click", function (event) {
     alert("Please provide a signature first.");
   } else {
     var dataURL = signaturePad.toDataURL();
-    download(dataURL, "signature.png");
+    $("input[name=signature_"+id+"]").val(dataURL);
+
   }
 });
 

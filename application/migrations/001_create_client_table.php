@@ -49,6 +49,14 @@ class Migration_Create_Client_Table extends CI_Migration {
                                 'type' => 'TEXT',
                                 'null' => TRUE,
                         ),
+                        'emergency_name' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ),
+                        'emergency_phone_number' => array(
+                                'type' => 'TEXT',
+                                'null' => TRUE,
+                        ));
                 ));
                 $this->dbforge->add_key('client_id', TRUE);
                 $this->dbforge->create_table('admin_client');
